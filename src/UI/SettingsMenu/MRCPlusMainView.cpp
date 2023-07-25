@@ -79,7 +79,7 @@ void MRCPlusMainView::DidActivate(bool firstActivation, bool addedToHierarchy, b
         HMUI::SimpleTextDropdown* mrcModeDropdown = QuestUI::BeatSaberUI::CreateDropdown(configcontainer->get_transform(), "Camera Mode", StringW(cameraMode), GetModeValues(),
         [](StringW newval) {OnChangeCameraMode(newval);});
 
-        std::string infostr = "MRC is a tool designed to stream gameplay to another device. Originally intended for green-screen setups, MRCPlus repurposes this feature for streaming/recording normal footage.\n\nFor more information, visit this mod's GitHub wiki.";
+        std::string infostr = "MRC is a tool designed to stream gameplay to another device. Originally intended for green-screen setups, MRCPlus repurposes this feature for streaming/recording normal footage. Note: For settings to save restart your game, this will be fixed soon but not right now.\n\nFor more information, visit this mod's GitHub wiki.";
         TMPro::TextMeshProUGUI* infoText = QuestUI::BeatSaberUI::CreateText(configcontainer->get_transform(), infostr);
         infoText->set_enableWordWrapping(true);
         infoText->set_alignment(TMPro::TextAlignmentOptions::Center);

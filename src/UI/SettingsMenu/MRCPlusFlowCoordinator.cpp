@@ -22,7 +22,7 @@ void MRCPlusFlowCoordinator::DidActivate(bool firstActivation, bool addedToHiera
     if (firstActivation) 
     {
         this->SetTitle(il2cpp_utils::newcsstr("MRCPlus"), (int)1);
-        this->showBackButton = true;
+        this->showBackButton = false;
 
         if (!this->mrcMainView) this->mrcMainView = QuestUI::BeatSaberUI::CreateViewController<MRCPlusMainView*>();
         if (!this->mrcCameraView) this->mrcCameraView = QuestUI::BeatSaberUI::CreateViewController<MRCPlusCameraView*>();
@@ -42,6 +42,6 @@ void MRCPlusFlowCoordinator::UpdateSettingsVisibility(bool leftVisible, bool rig
 void MRCPlusFlowCoordinator::BackButtonWasPressed(HMUI::ViewController* topView)
 {
     getConfig().Write();
-    HMUI::FlowCoordinator* settingsFC = QuestUI::GetModSettingsFlowCoordinator();
-    settingsFC->DismissFlowCoordinator(this, (int)0, nullptr, false);
+    //HMUI::FlowCoordinator* settingsFC = QuestUI::GetModSettingsFlowCoordinator();
+    //settingsFC;DismissFlowCoordinator(this, (int)0, nullptr, false);
 }

@@ -105,7 +105,7 @@ void CreateReferenceObject()
 extern "C" void setup(ModInfo& info) {
 
     info.id = "MRCPlus";
-    info.version = "1.0.1";
+    info.version = "1.0.0";
     modInfo = info;
     getConfig().Load();
 }
@@ -120,7 +120,6 @@ extern "C" void load() {
     // Install Hooks
     MRCPlus::Hooks::Install_UIHooks();
     MRCPlus::Hooks::Install_CameraHooks();
-    MRCPlus::Hooks::Install_RenderingHooks();
 
     // Register types + UI
     custom_types::Register::AutoRegister();
